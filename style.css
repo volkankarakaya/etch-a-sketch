@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+#main-container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 960px;
+    border:3px solid blue;
+    margin: 0;
+    align-content: flex-start;
+    padding: 0;
+    margin: auto;
+    
+}
+
+.square-grid{
+    border: 1px solid lightgray;
+    
+    flex: 1 0 auto;
+    
+}
