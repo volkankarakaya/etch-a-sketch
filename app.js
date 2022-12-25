@@ -1,6 +1,8 @@
 let mainContainer = document.getElementById("main-container");
-let squareNumber = 30;
+let squareNumber = 32;
 let squareSize = mainContainer.clientWidth / squareNumber;
+
+console.log(squareSize, mainContainer.clientWidth)
 
 for (let i = 0; i < squareNumber ** 2; i++) {
   let gridDiv = document.createElement("div");
@@ -8,6 +10,7 @@ for (let i = 0; i < squareNumber ** 2; i++) {
   mainContainer.appendChild(gridDiv);
   gridDiv.style.width = squareSize + "px";
   gridDiv.style.height = squareSize + "px";
+  gridDiv.style.flexBasis = squareSize + "px";
 }
 
 let squareDivs = document.querySelectorAll(".square-grid");
@@ -17,8 +20,8 @@ squareDivs.forEach((item) => {
     item.style.backgroundColor = "gray";
     if (e.buttons == 1) {
 
-        squareDivs.forEach(div=>div.addEventListener("mouseover",(ev)=>{
-            if(ev.buttons==1){ev.target.style.backgroundColor = "black"}
+        squareDivs.forEach(div=>div.addEventListener("mouseover",(e)=>{
+            if(e.buttons==1){e.target.style.backgroundColor = "black"}
             
         }))
     //   window.addEventListener("mouseover", (ev) => {
