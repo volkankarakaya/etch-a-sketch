@@ -29,3 +29,8 @@ html {
     flex: 1 1 auto;
     
 }
+
+h1{
+    text-align: center;
+    margin: 64px;
+}
