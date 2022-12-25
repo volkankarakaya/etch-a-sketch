@@ -1,7 +1,7 @@
 let mainContainer = document.getElementById("main-container");
 let squareNumber = Number(prompt("Choose grid size between 1-100!", "16"));
 
-let squareSize = mainContainer.clientWidth / squareNumber;
+
 
 function checkValidPrompt(squareNumber) {
   while (
@@ -15,6 +15,8 @@ function checkValidPrompt(squareNumber) {
 
 checkValidPrompt(squareNumber);
 
+
+let squareSize = mainContainer.clientWidth / squareNumber;
 for (let i = 0; i < squareNumber ** 2; i++) {
   let gridDiv = document.createElement("div");
   gridDiv.setAttribute("class", "square-grid");
@@ -37,14 +39,6 @@ squareDivs.forEach((item) => {
           }
         })
       );
-      //   window.addEventListener("mouseover", (ev) => {
-      //     if(ev.buttons==1){
-      //         ev.stopPropagation()
-      //         ev.target.style.backgroundColor = 'black'
-
-      //     }
-
-      //   });
     }
   });
 });
